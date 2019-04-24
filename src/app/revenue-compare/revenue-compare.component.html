@@ -1,0 +1,409 @@
+<div class="wrapper compare-wrap">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>营收对比</h4>
+        <!--<span class="title-right"><i class="iconfont icon-xuanzeriqi"></i></span>-->
+        <div class="date-picker pull-left">
+          <weui-date-picker (change)="pickerDate($event)" class="date-cc" type="date-ym" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+          <!--<span class="iconfont icon-xuanzeriqi"></span>-->
+        </div>
+      </div>
+      <div class="tab-head clearfix">
+        <div class="tab-head-item {{tab == 1?'tab-head-item-active':''}}" (click)="changeTab('1')">
+          <span>同比</span>
+        </div>
+        <div class="tab-head-item {{tab == 2?'tab-head-item-active':''}}" (click)="changeTab('2')">
+          <span>环比</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <div class="echarts-item" *ngIf="tab == 1">
+        <div class="echarts-title clearfix">
+          <div class="pull-left main-title">近五个月同比营收概况</div>
+        </div>
+        <div class="echarts-sheet pd-bottom">
+          <div class="sheet-title">营收 <span>(元)</span></div>
+          <div echarts [options]="option" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td *ngFor="let item of monthList">{{item}}</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td *ngFor="let item of thisList">{{item.lastyearRevenueAll}}k</td>
+              </tr>
+              <tr>
+                <td>今年</td>
+                <td *ngFor="let item of thisList">{{item.monthRevenueAll}}k</td>
+              </tr>
+              <tr>
+                <td>同比</td>
+                <td *ngFor="let item of thisList">{{item.tongRate}}%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">收款 <span>(元)</span></div>
+          <div echarts [options]="option1" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td *ngFor="let item of monthList">{{item}}</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td *ngFor="let item of thisList">{{item.lastyearIncomeAll}}k</td>
+              </tr>
+              <tr>
+                <td>今年</td>
+                <td *ngFor="let item of thisList">{{item.monthIncomeAll}}k</td>
+              </tr>
+              <tr>
+                <td>同比</td>
+                <td *ngFor="let item of thisList">{{item.lastyearIncomeAll == 0?0:((item.monthIncomeAll-item.lastyearIncomeAll)/(item.item.monthIncomeAll-item.lastyearIncomeAll))}}%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">Revpar <span>(元)</span></div>
+          <div echarts [options]="option2" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">出租率 <span>(元)</span></div>
+          <div echarts [options]="option3" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">平均房价 <span>(元)</span></div>
+          <div echarts [options]="option4" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">夜间数 <span>(元)</span></div>
+          <div echarts [options]="option5" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="echarts-item" *ngIf="tab == 2">
+        <div class="echarts-title clearfix">
+          <div class="pull-left main-title">近四个月环比营收概况</div>
+        </div>
+        <div class="echarts-sheet pd-bottom">
+          <div class="sheet-title">营收 <span>(元)</span></div>
+          <div echarts [options]="option6" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>营收</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>环比</td>
+                <td>32%</td>
+                <td>43%</td>
+                <td>40%</td>
+                <td>60%</td>
+                <td>50%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">收款 <span>(元)</span></div>
+          <div echarts [options]="option7" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>营收</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>环比</td>
+                <td>32%</td>
+                <td>43%</td>
+                <td>40%</td>
+                <td>60%</td>
+                <td>50%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">Revpar <span>(元)</span></div>
+          <div echarts [options]="option8" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">出租率 <span>(元)</span></div>
+          <div echarts [options]="option9" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">平均房价 <span>(元)</span></div>
+          <div echarts [options]="option10" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="echarts-sheet pd-bottom longgap-height">
+          <div class="sheet-title">夜间数 <span>(元)</span></div>
+          <div echarts [options]="option11" class="demo-sheet"></div>
+          <div class="sheet-table">
+            <table border="0" class="echarts-table">
+              <tr class="table-title">
+                <td>月份</td>
+                <td>2月</td>
+                <td>3月</td>
+                <td>4月</td>
+                <td>5月</td>
+                <td>6月</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+              <tr>
+                <td>去年</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+                <td>100,000</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <div class="no-more">
+        <div class="line"></div>
+        <div class="nomore">我是有底线的</div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</div>

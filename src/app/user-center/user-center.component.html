@@ -1,0 +1,159 @@
+<div class="wrapper user-center">
+  <div class="wrapper-bg">
+    <div class="top-section">
+      <div class="radius-bg">
+        <div class="title">
+          <div class="left-icon" routerLink="setting"><i class="iconfont icon-shezhi"></i></div>
+          <h4>个人中心</h4>
+          <div class="right-icon"><i class="iconfont icon-youjian"></i></div>
+        </div>
+        <div class="user-panel">
+          <div class="profile"><img src="../../assets/images/profile.png" alt=""></div>
+          <div class="tel">13874225694</div>
+          <div class="version">免费版</div>
+          <div class="out-time">2019-09-25到期</div>
+          <div class="pay-btn" routerLink="renew">续费</div>
+        </div>
+        <div class="weui-flex link-group">
+          <div class="weui-flex__item" routerLink="account">
+            <span class="link-icon account-info"></span>
+            <div class="placeholder">账户信息</div>
+          </div>
+          <div class="weui-flex__item" routerLink="relation">
+            <span class="link-icon contact"></span>
+            <div class="placeholder">关联酒店</div>
+          </div>
+          <!--当绑定了微信的时候，这里的文字显示的是解绑微信，点击弹出对话框，当解绑之后，文字变成了绑定微信，点击之后跳到绑定页面-->
+          <div class="weui-flex__item" (click)="onShow('auto',1)">
+            <span class="link-icon unbind"></span>
+            <div class="placeholder">解绑微信</div>
+          </div>
+          <!--<div class="weui-flex__item" routerLink="bind-wechat">
+            <span class="link-icon unbind"></span>
+            <div class="placeholder">绑定微信</div>
+          </div>-->
+          <div class="weui-flex__item">
+            <span class="link-icon ebi"></span>
+            <div class="placeholder">我的鹅币</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access" routerLink="version-center">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-banbenzhongxin"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>版本中心</p>
+          </div>
+          <div class="weui-cell__ft">高级版本每月只需99元</div>
+        </div>
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-wodedingdan"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>我的订单</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+        <div class="weui-cell weui-cell_access" routerLink="coupon">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-wodeyouhuiquan"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>我的优惠券</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell contact-kefu">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-lianxikefu"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>联系客服</p>
+          </div>
+          <div class="weui-cell__ft">0731-88892222</div>
+        </div>
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-fuwuzhongxin1"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>服务中心</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+        <div class="weui-cell weui-cell_access" routerLink="password-security">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-mimaanquan"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>密码安全</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+        <div class="weui-cell weui-cell_access" routerLink="feedback">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-jianyi"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>意见反馈</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-yingyongshangdian"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>应用商店</p>
+          </div>
+          <div class="weui-cell__ft">提升服务，增加收益</div>
+        </div>
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-woyaorongzi"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>我要融资</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__hd">
+            <i class="iconfont icon-guanyu"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>关于</p>
+          </div>
+          <div class="weui-cell__ft"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section exit">
+      退出账户
+    </div>
+    <div class="no-more">
+      <div class="line"></div>
+      <div class="nomore">我是有底线的</div>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>
+<weui-dialog #auto [config]="config"></weui-dialog>
+

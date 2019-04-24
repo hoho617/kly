@@ -1,0 +1,151 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <!--<div class="linear-bg">-->
+      <div class="fixed-head">
+        <div class="title">
+          <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+          <h4>前台收款</h4>
+        </div>
+        <div class="date-select clearfix">
+          <div class="date-picker pull-left">
+            <weui-date-picker class="date-cc" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+            <span class="iconfont icon-jiantouxia"></span>
+          </div>
+          <div class="month pull-right">
+            <span>前一天</span>
+            <span>后一天</span>
+          </div>
+        </div>
+      </div>
+    <!--</div>-->
+    <div class="scroll-cont">
+      <div class="linear-bg">
+        <div class="total-receivables">
+          <div class="day-receive">本日收款 (元)</div>
+          <div class="num">35648.46</div>
+          <div class="month-receive">本月收款 46842.26元</div>
+        </div>
+        <div class="other-receivable clearfix">
+          <div class="receive-item">
+            <p class="text">昨日营收</p>
+            <p class="number">260</p>
+          </div>
+          <div class="receive-item">
+            <p class="text">本月营收</p>
+            <p class="number">12260</p>
+          </div>
+          <div class="receive-item">
+            <p class="text">前台余额昨日</p>
+            <p class="number">3000</p>
+          </div>
+          <div class="receive-item">
+            <p class="text">前台余额总计</p>
+            <p class="number">232060</p>
+          </div>
+        </div>
+      </div>
+      <div class="receive-source clearfix">
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon pull-left">
+            <i class="iconfont icon-xianjin"></i>
+          </div>
+          <div class="right-text pull-left">
+            <h5>现金 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-shuaqia"></i>
+          </div>
+          <div class="right-text">
+            <h5>刷卡 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-zhifubao"></i>
+          </div>
+          <div class="right-text">
+            <h5>支付宝 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-weixin"></i>
+          </div>
+          <div class="right-text">
+            <h5>微信 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-huiyuanqia"></i>
+          </div>
+          <div class="right-text">
+            <h5>会员卡 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-guazhang"></i>
+          </div>
+          <div class="right-text">
+            <h5>挂账 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-daijinquan"></i>
+          </div>
+          <div class="right-text">
+            <h5>代金券 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-miandan"></i>
+          </div>
+          <div class="right-text">
+            <h5>免单 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-zhipiao"></i>
+          </div>
+          <div class="right-text">
+            <h5>支票 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+        <div class="source-item" [style.width.px]="offsetWidth">
+          <div class="left-icon">
+            <i class="iconfont icon-qita"></i>
+          </div>
+          <div class="right-text">
+            <h5>其他 <span>(元)</span></h5>
+            <p>昨日：2291.00</p>
+            <p>本月：19902.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

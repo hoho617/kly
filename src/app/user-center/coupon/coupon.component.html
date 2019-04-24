@@ -1,0 +1,123 @@
+<div class="wrapper coupon-wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>我的优惠券</h4>
+      </div>
+      <div class="tab-head">
+        <div class="weui-flex">
+          <div class="weui-flex__item">
+            <div class="tab-item {{tab == '1'?'tab-item-active':''}}" (click)="changeTab('1')">
+              未使用
+            </div>
+          </div>
+          <div class="weui-flex__item" (click)="changeTab('2')">
+            <div class="tab-item {{tab == '2'?'tab-item-active':''}}">
+              已使用
+            </div>
+          </div>
+          <div class="weui-flex__item no-margin" (click)="changeTab('3')">
+            <div class="tab-item {{tab == '3'?'tab-item-active':''}}">
+              已过期
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <div class="float-notice">
+        <div class="pull-left"><i class="iconfont icon-tongzhi"></i>您有2张待领取的优惠券，立即领取！</div>
+        <div class="close-notice pull-right"><i class="iconfont icon-guanbi"></i></div>
+      </div>
+      <div class="coupon-cells">
+        <div class="coupon-cell">
+          <div class="coupon-heading">
+            <div class="coupon-hd-title">
+              <h4>20<span>元</span></h4>
+            </div>
+            <div class="coupon-hd-sub">满200元可用</div>
+          </div>
+          <div class="coupon-body">
+            <div class="coupon-body-title">国庆活动优惠券</div>
+            <div class="coupon-body-desc">会员专享 | 不可和活动叠加使用</div>
+            <div class="coupon-body-other">有效期至：2018-10-30</div>
+            <div class="coupon-status new-coupon">
+              NEW
+            </div>
+          </div>
+        </div>
+        <div class="coupon-cell">
+          <div class="coupon-heading">
+            <div class="coupon-hd-title">
+              <h4>20<span>元</span></h4>
+            </div>
+            <div class="coupon-hd-sub">满200元可用</div>
+          </div>
+          <div class="coupon-body">
+            <div class="coupon-body-title">端午活动优惠券</div>
+            <div class="coupon-body-desc">会员专享 | 不可和活动叠加使用</div>
+            <div class="coupon-body-other">有效期至：2018-10-30</div>
+            <div class="coupon-status soon-coupon">
+             即将过期
+            </div>
+          </div>
+        </div>
+        <div class="coupon-cell">
+          <div class="coupon-heading">
+            <div class="coupon-hd-title">
+              <h4>20<span>元</span></h4>
+            </div>
+            <div class="coupon-hd-sub">满200元可用</div>
+          </div>
+          <div class="coupon-body">
+            <div class="coupon-body-title">端午活动优惠券</div>
+            <div class="coupon-body-desc">会员专享 | 不可和活动叠加使用</div>
+            <div class="coupon-body-other">有效期至：2018-10-30</div>
+            <div class="coupon-status out-coupon">
+              已过期
+            </div>
+          </div>
+        </div>
+        <div class="coupon-cell">
+          <div class="coupon-heading">
+            <div class="coupon-hd-title">
+              <h4>20<span>元</span></h4>
+            </div>
+            <div class="coupon-hd-sub">满200元可用</div>
+          </div>
+          <div class="coupon-body">
+            <div class="coupon-body-title">端午活动优惠券</div>
+            <div class="coupon-body-desc">会员专享 | 不可和活动叠加使用</div>
+            <div class="coupon-body-other">有效期至：2018-10-30</div>
+            <div class="coupon-status out-coupon">
+              已过期
+            </div>
+          </div>
+        </div>
+        <div class="coupon-cell">
+          <div class="coupon-heading">
+            <div class="coupon-hd-title">
+              <h4>20<span>元</span></h4>
+            </div>
+            <div class="coupon-hd-sub">满200元可用</div>
+          </div>
+          <div class="coupon-body">
+            <div class="coupon-body-title">端午活动优惠券</div>
+            <div class="coupon-body-desc">会员专享 | 不可和活动叠加使用</div>
+            <div class="coupon-body-other">有效期至：2018-10-30</div>
+            <div class="coupon-status out-coupon">
+              已过期
+            </div>
+          </div>
+        </div>
+        <div class="no-more">
+          <div class="line"></div>
+          <div class="nomore">我是有底线的</div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

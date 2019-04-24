@@ -1,0 +1,105 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>交班概况</h4>
+        <span class="title-right">
+            <weui-picker class="shops" placeholder="全部班次" required [groups]="items" [(ngModel)]="item" name="item"></weui-picker>
+        </span>
+      </div>
+      <div class="date-select clearfix gap-height">
+        <div class="date-picker pull-left">
+          <weui-date-picker class="date-cc" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+          <span class="iconfont icon-jiantouxia"></span>
+        </div>
+        <div class="month pull-right">
+          <span>前一天</span>
+          <span>后一天</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <div class="block-item">
+        <div class="block-head clearfix blue-head">
+          <div class="pull-left left-intro">消费</div>
+          <div class="pull-right right-data">合计: 9807</div>
+        </div>
+        <div class="block-list">
+          <div class="item clearfix">
+            <div class="pull-left left-intro">房费</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">餐饮</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">小商品</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">会员卡费</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">其他</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+        </div>
+      </div>
+      <div class="block-item gap-height">
+        <div class="block-head clearfix red-head">
+          <div class="pull-left left-intro">付款</div>
+          <div class="pull-right right-data">合计: 9807</div>
+        </div>
+        <div class="block-list">
+          <div class="item clearfix">
+            <div class="pull-left left-intro">现金</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">银行卡</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">支付宝</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">微信</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">挂账</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+        </div>
+      </div>
+      <div class="block-item gap-height">
+        <div class="block-head clearfix yellow-head">
+          <div class="pull-left left-intro">会员充值</div>
+          <div class="pull-right right-data">合计: 9807</div>
+        </div>
+        <div class="block-list">
+          <div class="item clearfix">
+            <div class="pull-left left-intro">现金充值</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">银行卡</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">支付宝</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+          <div class="item clearfix">
+            <div class="pull-left left-intro">微信</div>
+            <div class="pull-right right-data">1200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

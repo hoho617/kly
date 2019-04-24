@@ -1,0 +1,83 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>客人</h4>
+      </div>
+      <div class="tab-head">
+        <div class="tab-item {{ nowTab =='1'?'tab-item-active':''}}" (click)="changeTab('1')">在住报告</div>
+        <div class="tab-item {{ nowTab =='2'?'tab-item-active':''}}" (click)="changeTab('2')">历史离店</div>
+      </div>
+      <div class="date-select clearfix" *ngIf="nowTab =='2'">
+        <div class="date-picker pull-left">
+          <weui-date-picker class="date-cc" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+          <span class="iconfont icon-jiantouxia"></span>
+        </div>
+        <div class="month pull-right">
+          <span>前一天</span>
+          <span class="grey-txt">后一天</span>
+        </div>
+      </div>
+      <div class="total-data">
+        <div class="shift-item pull-left" style="display: none;">在住间数: <span>33</span>间</div>
+        <div class="shift-item pull-left">离店间数: <span>33</span>间</div>
+        <div class="total-money pull-right">
+          <div class="money-item">
+            房价合计: <span>8888</span>元
+          </div>
+        </div>
+      </div>
+      <div class="table-head">
+        <div class="table-item">房号</div>
+        <div class="table-item">姓名</div>
+        <div class="table-item">房价</div>
+        <div class="table-item">抵离时间</div>
+      </div>
+    </div>
+    <div class="scroll-cont scroll-cont-live"  *ngIf="nowTab =='1'">
+      <div class="table-list">
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont scroll-cont-leave" *ngIf="nowTab =='2'">
+      <div class="table-list">
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+        <div class="table-group">
+          <div class="table-item">1201</div>
+          <div class="table-item">张某某</div>
+          <div class="table-item">258</div>
+          <div class="table-item">12/21-12/22</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

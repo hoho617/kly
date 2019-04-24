@@ -1,0 +1,245 @@
+<div class="wrap">
+  <div class="home-head">
+    <div class="local-message">
+      <div class="local">
+        <p>您好</p>
+        <p>欢迎使用千里眼</p>
+      </div>
+      <div class="message">
+        <!--<i class="iconfont icon-youjian"></i>-->
+      </div>
+    </div>
+    <div class="hotel">
+      <div class="hotel-img">
+        <img src="../../assets/images/kiloeye-10.png" />
+      </div>
+      <p class="hotel-name">{{hotelInfo.hotelName}}</p>
+      <p><span class="up-earning">提升收益</span></p>
+      <div class="weui-flex margin">
+        <div class="weui-flex__item border-right">
+          <p class="earning-num">{{manageDaily.todayRevenueAll}}</p>
+          <p class="earning-name">昨日营收</p>
+        </div>
+        <div class="weui-flex__item">
+          <p class="earning-num">{{manageDaily.monthRevenueAll}}</p>
+          <p class="earning-name">本月营收</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hotel-data">
+    <div class="weui-flex data-name">
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">Revpar(总房数)</div>
+      </div>
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">平均房价</div>
+      </div>
+      <div class="weui-flex__item">
+        <div class="placeholder">出租率(总房数)</div>
+      </div>
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">间夜数</div>
+      </div>
+    </div>
+    <div class="weui-flex pad-bottom">
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.monthRevparallMoney}}</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.monthAverageMoney}}</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.monthRoomallRate}}%</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.todayNightCount}}</p>
+      </div>
+    </div>
+    <div class="weui-flex data-name">
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">Revpar(可售)</div>
+      </div>
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">维修房</div>
+      </div>
+      <div class="weui-flex__item">
+        <div class="placeholder">出租率(可售)</div>
+      </div>
+      <div class="weui-flex__item border-right">
+        <div class="placeholder">过夜间数</div>
+      </div>
+    </div>
+    <div class="weui-flex pad-bottom">
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.monthRevparMoney}}</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.todayServicingCount}}</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.todayRoomRate}}%</p>
+      </div>
+      <div class="weui-flex__item">
+        <p class="yesterday-num">{{manageDaily.todayNightallCount}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="gap"></div>
+<div class="wrap-swiper">
+  <weui-swiper [options]="options">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="report">
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/income-report">
+                <div class="report-icon"><i class="iconfont icon-shouyizaobao"></i></div>
+                <p>收益早报</p>
+              </div>
+              <span class="delete" *ngIf="showDelete" (click)="delete()">-</span>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/month-revenue">
+                <div class="report-icon"><i class="iconfont icon-shouyiyuebao"></i></div>
+                <p>收益月报</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/revenue-compare/1">
+                <div class="report-icon "><i class="iconfont icon-tongbi"></i></div>
+                <p>同比</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/revenue-compare/2">
+                <div class="report-icon "><i class="iconfont icon-huanbi"></i></div>
+                <p>环比</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item">
+                <div class="report-icon blue-bg"><i class="iconfont icon-dingdanguanli"></i></div>
+                <p>预订管理</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/shift-situation">
+                <div class="report-icon blue-bg"><i class="iconfont icon-jiaobangaikuang"></i></div>
+                <p>交班概况</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/changes">
+                <div class="report-icon blue-bg"><i class="iconfont icon-shouyizaobao"></i></div>
+                <p>异动</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/room-status">
+                <div class="report-icon blue-bg"><i class="iconfont icon-shouyiyuebao"></i></div>
+                <p>实时房态</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/forward-housing">
+                <div class="report-icon blue-bg"><i class="iconfont icon-tongbi"></i></div>
+                <p>远期房态</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/guest">
+                <div class="report-icon blue-bg"><i class="iconfont icon-huanbi"></i></div>
+                <p>客人管理</p>
+              </div>
+            </div>
+            <div class="report-block" [style.width.px]="reportWidth">
+              <div class="report-item" routerLink="/front-receivables">
+                <div class="report-icon blue-bg"><i class="iconfont icon-qiantaishoukuan"></i></div>
+                <p>前台收款</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </weui-swiper>
+</div>
+<div class="gap"></div>
+<div class="advertisement">
+  <div class="ad-left">
+    <div class="ad-img">
+      <img src="../../assets/images/kiloeye-11.png"/>
+    </div>
+    <div class="ad-title">
+      <p>天鹅会微课 1806期</p>
+      <p class="bold">郑叫兽教您如何提升点评分数</p>
+    </div>
+  </div>
+  <div class="ad-right">
+    <span class="new-message"></span>
+    <i class="iconfont icon-jiantou"></i>
+  </div>
+</div>
+<div class="gap"></div>
+<div class="advertisement">
+  <div class="ad-left half border-right pad-right">
+    <div class="ad-title">
+      <p class="bold">高级服务商城</p>
+      <p class="describe">更专业  更全面</p>
+    </div>
+    <div class="ad-img">
+      <img src="../../assets/images/kiloeye-12.png"/>
+    </div>
+  </div>
+  <div class="ad-left half">
+    <div class="ad-title pad-left">
+      <p class="bold">营业体检</p>
+      <p class="describe">超过了34%的酒店</p>
+    </div>
+    <div class="ad-img">
+      <img src="../../assets/images/kiloeye-13.png"/>
+    </div>
+  </div>
+</div>
+<div class="gap"></div>
+<div class="wrap-ad">
+  <div class="advertisement-title">
+    <span class="ad-tip"></span>
+    <span>OTA收益管理</span>
+    <span class="title-tip">提排名  带客流  增订单</span>
+  </div>
+  <div class="advertisement">
+    <div class="teacher">
+      <p class="teacher-title">郑叫兽教您如何提升点评分数</p>
+      <p class="teacher-text">投1元赚5元，门店平均排名提升50%</p>
+    </div>
+    <div class="ad-left">
+      <div class="ad-img">
+        <img src="../../assets/images/kiloeye-14.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="gap"></div>
+<div class="advertisement service">
+  <div class="ad-title pad-left ">
+    <p class="bold">酒店OTA营销服务</p>
+    <p class="describe">让您开店更省心%的酒店</p>
+    <button>点击购买</button>
+  </div>
+  <div class="ad-left">
+    <div class="ad-img">
+      <img class="servive-img" src="../../assets/images/kiloeye-15.png"/>
+    </div>
+  </div>
+</div>
+<div class="no-more">
+  <div class="line"></div>
+  <div class="nomore">我是有底线的</div>
+  <div class="line"></div>
+</div>
+<!--<app-footer [isActive]="isActive"></app-footer>-->

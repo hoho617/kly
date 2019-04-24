@@ -1,0 +1,223 @@
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+.wrapper {
+  height: 100%;
+  background-color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+  //font-weight: 600;
+  position: absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+.gap-height {
+  margin-top:8px;
+}
+.clearfix:after {
+  content:"";
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.wrapper-bg {
+  background-color: #F5F5F5;
+}
+.fixed-head {
+  position: absolute;
+  top:0;
+  width:100%;
+  background-color: #fff;
+}
+.title {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  color:#3E3A39;
+  padding:0 15px;
+  .return-icon {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    top:0;
+    text-align: right;
+    transform: rotateY(180deg);
+    .iconfont {
+      color:#3E3A39;
+    }
+
+  }
+}
+.tab-head {
+  height: 40px;
+  line-height: 40px;
+  padding:0 20%;
+  border-bottom:1px solid #DCDDDD;
+  .tab-item {
+    float: left;
+    width:50%;
+    text-align: center;
+    font-size: 1.4rem;
+    color:#9E9E9F;
+    position: relative;
+    font-weight: 600;
+  }
+  .tab-item-active {
+      color:#10A0FF;
+  }
+  .tab-item-active:after {
+    content:"";
+    display: block;
+    width:30px;
+    height: 3px;
+    background-color: #10A0FF;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left:-15px;
+    border-radius:3px;
+  }
+}
+.total-data {
+  height: 33px;
+  line-height: 33px;
+  padding:0 15px;
+  font-size: 1.2rem;
+  background-color: #F5F5F5;
+  color:#9FA0A0;
+  .money-item {
+    display: inline-block;
+    margin-left:10px;
+  }
+}
+
+
+
+
+.date-select {
+  height: 40px;
+  line-height: 40px;
+  color:#10A0FF;
+  padding:0 15px;
+}
+.date-picker {
+  position: relative;
+  width:27%;
+  height: 40px;
+  .weui-input {
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+  }
+  .iconfont {
+    position: absolute;
+    font-size: 10px;
+    bottom:0;
+    right:0;
+    font-weight: bold;
+  }
+}
+.month {
+  font-size: 1.2rem;
+  width:30%;
+  span {
+    display: inline-block;
+    width:50%;
+    text-align: right;
+    font-weight: 600;
+  }
+  .grey-txt {
+    color:#9E9E9F;
+  }
+}
+.table-head {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.2rem;
+  color:#fff;
+  width:100%;
+  background: -webkit-linear-gradient(to right,#00ADFF,#008FFF);
+  background: -o-linear-gradient(to right,#00ADFF,#008FFF);
+  background: -moz-linear-gradient(to right,#00ADFF,#008FFF);
+  background: linear-gradient(to right,#00ADFF,#008FFF);
+  padding:0 15px;
+  overflow: hidden;
+}
+.table-item {
+  text-align: left;
+  float: left;
+  width:24%;
+}
+.table-item:nth-child(2) {
+}
+.table-head .table-item:last-child {
+  width:28%;
+}
+.scroll-cont {
+  position: absolute;
+  bottom:0;
+  width:100%;
+  top:154px;
+  overflow: auto;
+}
+.scroll-cont-leave{
+  top:194px;
+}
+  .table-group {
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    padding:0 15px;
+    background-color: #fff;
+    position: relative;
+  }
+  .table-group:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-color: #DCDDDD;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+  }
+  .table-group:last-child:after {
+  display: none;
+}
+.table-group:nth-child(2n){
+  background-color: rgba(16,160,255,0.05);
+}
+  .table-content {
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    font-size: 1.3rem;
+    color:#3E3A39;
+    padding:0 15px;
+
+  }
+.weui-accordion-active {
+  background-color: rgba(16,160,255,0.05);
+  .weui-accordion-content {
+    max-height: 100px;
+  }
+  .iconfont:before {
+    content:"\e65c";
+  }
+}
+

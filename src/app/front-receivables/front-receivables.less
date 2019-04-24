@@ -1,0 +1,220 @@
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+.wrapper {
+  height: 100%;
+  background-color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+  //font-weight: 600;
+  position: absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+  line-height: 1;
+}
+.gap-height {
+  margin-top:8px;
+}
+.clearfix:after {
+  content:"";
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.wrapper-bg {
+  background-color: #F5F5F5;
+}
+.fixed-head {
+  position: absolute;
+  top:0;
+  width:100%;
+  color:#fff;
+  padding:0 15px;
+  background: -webkit-linear-gradient(to bottom,#00A5FF,#00A5FF);
+  background: -o-linear-gradient(to bottom,#00A5FF,#00A5FF);
+  background: -moz-linear-gradient(to bottom,#00A5FF,#00A5FF);
+  background: linear-gradient(to bottom,#00A5FF,#00A5FF);
+}
+.fixed-head:after {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  right: 15px;
+  height: 1px;
+  background-color: rgba(255,255,255,.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+.title {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  h4 {
+    font-weight: normal;
+  }
+  .return-icon {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    top:0;
+    text-align: right;
+    transform: rotateY(180deg);
+    .iconfont {
+      color:#fff;
+    }
+
+  }
+}
+.date-select {
+  height: 40px;
+  line-height: 40px;
+  color:#fff;
+}
+.date-picker {
+  position: relative;
+  width:27%;
+  .weui-input {
+    font-size: 1.4rem;
+    height: 40px;
+    line-height: 40px;
+  }
+  .iconfont {
+    position: absolute;
+    font-size: 10px;
+    bottom:0;
+    right:0;
+  }
+}
+.month {
+  font-size: 1.2rem;
+  width:30%;
+  span {
+    display: inline-block;
+    width:50%;
+    text-align: right;
+    opacity: .5;
+  }
+}
+
+.scroll-cont {
+  position: absolute;
+  bottom:0;
+  width:100%;
+  top:80px;
+  overflow: auto;
+}
+.linear-bg {
+  background: -webkit-linear-gradient(to bottom,#00A5FF,#008FFF);
+  background: -o-linear-gradient(to bottom,#00A5FF,#008FFF);
+  background: -moz-linear-gradient(to bottom,#00A5FF,#008FFF);
+  background: linear-gradient(to bottom,#00A5FF,#008FFF);
+}
+.total-receivables {
+  color:#fff;
+  text-align: center;
+  padding:5px 0;
+  .day-receive {
+    font-size: 1.2rem;
+    color:#fff;
+    opacity: .5;
+    padding:16px 0;
+  }
+  .num {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .month-receive {
+    font-size: 1.5rem;
+    padding:18px 0;
+  }
+}
+.other-receivable {
+  padding:12px 15px;
+  background-color: rgba(255,255,255,.2);
+  .receive-item {
+    float: left;
+    width:25%;
+    text-align: center;
+    .text {
+      font-size: 1.1rem;
+      color:#fff;
+      opacity: .5;
+    }
+    .number {
+      font-size: 1.5rem;
+      color:#fff;
+      margin-top:9px;
+      border-right: 1px solid #fff;
+    }
+  }
+  .receive-item:last-child .number {
+    border: none;
+  }
+}
+.receive-source {
+  padding:0 15px;
+
+  .source-item {
+    float: left;
+    height: 70px;
+    border:1px solid #DCDDDD;
+    background-color: #FFFFFF;
+    border-radius:5px;
+    margin-right:8px;
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+    margin-top:15px;
+    .left-icon {
+      width:40px;
+      height: 40px;
+      background: -webkit-linear-gradient(180deg,#00ADFF,#008FFF);
+      background: -o-linear-gradient(180deg,#00ADFF,#008FFF);
+      background: -moz-linear-gradient(180deg,#00ADFF,#008FFF);
+      background: linear-gradient(180deg,#21C9E9,#0094FF);
+      border-radius:50%;
+      line-height: 40px;
+      text-align: center;
+      color:#fff;
+      display: inline-block;
+      box-shadow: 0px 4px 10px rgba(0,187,227,.3);
+      margin-right:8px;
+      .iconfont {
+        font-size: 2.8rem;
+      }
+    }
+    .right-text {
+      display: inline-block;
+      h5 {
+        font-size: 1.3rem;
+        color:#231815;
+        span {
+          font-size: 1rem;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+        color:#9FA0A0;
+        margin-top:5px;
+      }
+    }
+  }
+  .source-item:nth-child(2n){
+    margin-right:0;
+  }
+}
+

@@ -1,0 +1,204 @@
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+.wrapper {
+  height: 100%;
+  background-color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+  //font-weight: 600;
+  line-height: 1;
+  position: absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+.wrapper-bg {
+  background-color: #F5F5F5;
+}
+.gap-height {
+  margin-top:8px;
+}
+.clearfix:after {
+  content:"";
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.wrapper-bg {
+  background-color: #F5F5F5;
+}
+.fixed-head {
+  position: absolute;
+  top:0;
+  width:100%;
+  background-color: #fff;
+}
+.title {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  color:#3E3A39;
+  padding:0 15px;
+  .return-icon {
+    position: absolute;
+    width:40px;
+    height: 40px;
+    top:0;
+    text-align: right;
+    transform: rotateY(180deg);
+    .iconfont {
+      color:#3E3A39;
+    }
+
+  }
+}
+.tab-head {
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  .tab-item {
+    float: left;
+    width:25%;
+    text-align: center;
+    font-size: 1.4rem;
+    color:#9E9E9F;
+    position: relative;
+    font-weight: 600;
+  }
+  .tab-item-active {
+      color:#FA8C32;
+  }
+  .tab-item-active:after {
+    content:"";
+    display: block;
+    width:30px;
+    height: 3px;
+    background-color: #FA8C32;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left:-15px;
+    border-radius:3px;
+  }
+}
+.tab-head:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  background-color: #DBDCDC;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.scroll-cont {
+  position: absolute;
+  bottom:0;
+  width:100%;
+  top:80px;
+  overflow: auto;
+}
+.server-list {
+
+  .server-section {
+    .server-title {
+      height: 33px;
+      line-height: 33px;
+      font-size: 1.5rem;
+      color:#9E9E9F;
+      padding:0 15px;
+    }
+    .server-cont {
+      background-color: #fff;
+      //padding:0 15px;
+      overflow: hidden;
+      padding-top:15px;
+      .server-item {
+        float: left;
+        width:25%;
+        text-align: center;
+        margin-bottom:20px;
+        .icon {
+          width:25px;
+          height: 25px;
+          line-height: 25px;
+          border-radius:3px;
+          display: inline-block;
+          color:#fff;
+          .iconfont {
+            font-size: 2rem;
+          }
+        }
+        .kefang {
+          background-color: #10A0FF;
+        }
+        .canyin {
+          background-color: #F7B52C;
+        }
+        .qianliyan {
+          background-color: #0094FC;
+        }
+        .fangjiapai {
+          background-color: #D6AB4F;
+        }
+        .wechat {
+          background-color: #1EAA39;
+        }
+        .xiaofeige {
+          background-color: #00C79E;
+        }
+        .feizhu {
+          background-color: #F7B52C;
+        }
+        .qunaer {
+          background-color: #00BAAD;
+        }
+        .xiecheng {
+          background-color: #0080E8;
+        }
+        .meituan {
+          background-color: #3BBAAB;
+        }
+        .feizhu {
+          background-color: #F7B52C;
+        }
+        .feizhu {
+          background-color: #F7B52C;
+        }
+        .zhifubao {
+          background-color: #009FE8;
+        }
+        .weixinzhifu {
+          background-color: #1EAA39;
+        }
+        .tousu {
+          background-color: #FD6452;
+        }
+        .jianyi {
+          background-color: #8DC21F;
+        }
+        .text {
+          margin-top:10px;
+          font-size: 1.3rem;
+          color:#3E3A39;
+        }
+      }
+    }
+  }
+}
+

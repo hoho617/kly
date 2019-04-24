@@ -1,0 +1,83 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>远期房态</h4>
+        <span class="suggestion">建议措施</span>
+      </div>
+      <div class="date-select clearfix gap-height">
+        <div class="date-picker pull-left">
+          <weui-date-picker class="date-cc" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+          <span class="iconfont icon-jiantouxia"></span>
+        </div>
+        <div class="month pull-right">
+          <span>前一天</span>
+          <span>后一天</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <div class="total-rooms">
+        <div class="linear-box">
+          <div class="inner-box clearfix">
+            <div class="pull-left inner-item">
+              <p class="main-tit">总房数</p>
+              <p class="number">120</p>
+            </div>
+            <div class="pull-right inner-item">
+              <p class="main-tit">可售数</p>
+              <p class="number">70</p>
+            </div>
+          </div>
+        </div>
+        <div class="reserve">
+          <div class="reserve-item">
+            <p>所有预订</p>
+            <span>12</span>
+          </div>
+          <div class="reserve-item">
+            <p>有效预订</p>
+            <span>11</span>
+          </div>
+          <div class="reserve-item">
+            <p>已入住</p>
+            <span>40</span>
+          </div>
+          <div class="reserve-item">
+            <p>维修房</p>
+            <span>3</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-list">
+        <div class="card-item">
+          <div class="card-title">
+            <span>高级双人房</span>
+          </div>
+          <div class="card-cont">
+            <div class="cont-item">
+               <span>总房数</span>20
+            </div>
+            <div class="cont-item">
+               <span>可售数</span>11
+            </div>
+            <div class="cont-item">
+               <span>维修房</span>0
+            </div>
+            <div class="cont-item">
+               <span>已入住</span>9
+            </div>
+            <div class="cont-item">
+               <span>所有预订</span>12
+            </div>
+            <div class="cont-item">
+               <span>有效预订</span>7
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

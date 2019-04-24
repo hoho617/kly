@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>交班概况</h4>
+      </div>
+      <div class="date-select clearfix">
+        <div class="date-picker pull-left">
+          <weui-date-picker class="date-cc" placeholder="Pick a Date" [min]="DT.min" [max]="DT.max" [(ngModel)]="res.date" name="date"></weui-date-picker>
+          <span class="iconfont icon-jiantouxia"></span>
+        </div>
+        <div class="month pull-right">
+          <span>上月</span>
+          <span>下月</span>
+        </div>
+      </div>
+      <div class="total-data">
+        <div class="shift-item pull-left">班次: <span>22</span></div>
+        <div class="total-money pull-right">
+          <div class="money-item">
+            上缴: <span>8888</span>元
+          </div>
+          <div class="money-item">
+            下放: <span>8888</span>元
+          </div>
+        </div>
+      </div>
+      <div class="table-head">
+        <div class="table-item date">日期</div>
+        <div class="table-item shift">班次</div>
+        <div class="table-item up">上缴</div>
+        <div class="table-item down">下放</div>
+        <div class="table-item icon">&nbsp;</div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <weui-accordion [collapsible]="collapsible" (select)="select($event)">
+        <weui-accordion-panel class="weui-accordion-panel" *ngFor="let item of list" [disabled]="item.disabled">
+          <div class="heading" heading>
+              <div class="table-heading clearfix">
+                <div class="table-item date">{{item.date}}</div>
+                <div class="table-item shift">{{item.shift}}</div>
+                <div class="table-item up">{{item.up}}</div>
+                <div class="table-item down">{{item.down}}</div>
+                <div class="table-item icon"><i class="iconfont icon-jiantouxia"></i></div>
+              </div>
+          </div>
+          <div class="content">
+            <div class="weui-cells">
+              <div class="table-content clearfix"
+                 *ngFor="let extra of item.extraList; let idx = index;">
+                <div class="table-item date">&nbsp;</div>
+                <div class="table-item shift">{{extra.shift}}</div>
+                <div class="table-item up">{{extra.up}}</div>
+                <div class="table-item down">{{extra.down}}</div>
+                <div class="table-item icon">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+        </weui-accordion-panel>
+      </weui-accordion>
+    </div>
+  </div>
+</div>

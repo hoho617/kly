@@ -1,0 +1,206 @@
+.renew-wrapper {
+  *{
+    box-sizing:border-box;
+  }
+    height: 100%;
+    background-color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+    box-sizing:border-box;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  .wrapper-bg {
+    background-color: #F5F5F5;
+  }
+  .gap-height {
+    margin-top:8px;
+  }
+  .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    color:#3E3A39;
+    padding:0 15px;
+    background-color: #fff;
+    h4{
+      font-weight: normal;
+    }
+    .return-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      text-align: right;
+      transform: rotateY(180deg);
+      .iconfont {
+        color:#3E3A39;
+      }
+    }
+  }
+  .section {
+    background-color: #fff;
+    .weui-media-box_appmsg {
+      padding:20px 15px;
+    }
+    .weui-media-box_appmsg .weui-media-box__hd {
+      width:50px;
+      height: 50px;
+      border-radius:50%;
+      overflow: hidden;
+    }
+    .weui-media-box__title {
+      font-size: 1.5rem;
+      color:#3E3A39;
+    }
+    .weui-media-box__desc {
+      font-size: 1.2rem;
+      color:#F29600;
+      margin-top:3px;
+    }
+    .weui-cells {
+      margin-top:0;
+      font-size: 1.5rem;
+      color:#3E3A39;
+      .weui-cell {
+        padding:13px 15px;
+      }
+      .weui-cell:before {
+        border-color:#DCDDDD;
+      }
+    }
+    .weui-cells:after,.weui-cells:before {
+      display: none;
+    }
+    .weui-cell__ft {
+      color: #3E3A39;
+    }
+  }
+
+  .mode-section {
+    padding:12px 15px 20px;
+    line-height: 1;
+    .mode-title {
+      font-size: 1.5rem;
+      color:#3E3A39;
+    }
+    .mode-list {
+      margin-top:3px;
+      overflow: hidden;
+      .mode-item {
+        float: left;
+        position: relative;
+        margin-right:16px;
+        height: 68px;
+        margin-top:12px;
+        border:1px solid #DBDCDC;
+        border-radius:6px;
+        text-align: center;
+        padding:14px 0 12px;
+        .mode-item-title {
+          font-size: 2rem;
+          color:#FD5440;
+        }
+        .mode-item-price {
+          font-size: 1.2rem;
+          margin-top:8px;
+          .real {
+            color:#3E3A39;
+          }
+          .original {
+            color:#9E9E9F;
+            text-decoration: line-through;
+            margin-right:5px;
+          }
+        }
+      }
+      .mode-item:nth-child(2n){
+        margin-right:0;
+      }
+      .mode-item-active {
+        background-color: #FD5440;
+        border-color:transparent;
+        .mode-item-title {
+          color:#fff;
+        }
+        .mode-item-price {
+          .real {
+            color:#fff;
+          }
+          .original {
+            color:#fff;
+            opacity: .5;
+          }
+        }
+      }
+      .recommend:after {
+        content:"推荐";
+        display: block;
+        width:35px;
+        height: 14px;
+        line-height: 14px;
+        font-size: .9rem;
+        color:#fff;
+        background: linear-gradient(to right,#FFB400,#FF8200);
+        border-radius:7px 0 0 7px;
+        right:0;
+        position: absolute;
+        top:8px;
+      }
+    }
+  }
+
+  .weui-cell_access {
+    .weui-cell__ft {
+      font-size: 1.2rem;
+      color:#9E9E9F;
+    }
+  }
+
+  .icon-weixinzhifu {
+    color:#1EAA39;
+    font-size: 1.8rem;
+  }
+  .fixed-foot {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    background-color: #fff;
+    z-index: 99;
+    .left-item {
+      font-size: 1.2rem;
+      color:#9E9E9F;
+      .red-color {
+        color:#E95513;
+      }
+      i {
+        font-style: normal;
+        font-size: 1.5rem;
+      }
+    }
+    .linear-color {
+      background: linear-gradient(to right,#FFB400,#FF8200);
+      font-size: 1.8rem;
+      color:#FFFFFF;
+    }
+  }
+  .fixed-foot:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-color: #DCDDDD;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+  }
+}

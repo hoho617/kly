@@ -1,0 +1,96 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>服务中心</h4>
+      </div>
+      <div class="tab-head">
+        <div class="tab-item {{ nowTab =='1'?'tab-item-active':''}}" (click)="changeTab('1')">报障</div>
+        <div class="tab-item {{ nowTab =='2'?'tab-item-active':''}}" (click)="changeTab('2')">处理中</div>
+        <div class="tab-item {{ nowTab =='3'?'tab-item-active':''}}" (click)="changeTab('3')">已完成</div>
+        <div class="tab-item {{ nowTab =='4'?'tab-item-active':''}}" (click)="changeTab('4')">全部</div>
+      </div>
+    </div>
+    <div class="scroll-cont" *ngIf="nowTab =='1'">
+      <div class="server-list">
+        <div class="server-section">
+          <div class="server-title">相关软件</div>
+          <div class="server-cont">
+            <div class="server-item">
+              <div class="icon kefang"><i class="iconfont icon-tianehui"></i></div>
+              <div class="text">客房软件</div>
+            </div>
+            <div class="server-item">
+              <div class="icon canyin"><i class="iconfont icon-canyinruanjian"></i></div>
+              <div class="text">餐饮软件</div>
+            </div>
+            <div class="server-item">
+              <div class="icon qianliyan"><i class="iconfont icon-qianliyan"></i></div>
+              <div class="text">千里眼</div>
+            </div>
+            <div class="server-item">
+              <div class="icon fangjiapai"><i class="iconfont icon-fangjiapai"></i></div>
+              <div class="text">房价牌</div>
+            </div>
+            <div class="server-item">
+              <div class="icon wechat"><i class="iconfont icon-weixin"></i></div>
+              <div class="text">微信订房</div>
+            </div>
+            <div class="server-item">
+              <div class="icon xiaofeige"><i class="iconfont icon-xiaofeige"></i></div>
+              <div class="text">小飞鸽</div>
+            </div>
+          </div>
+        </div>
+        <div class="server-section">
+          <div class="server-title">OTA直连</div>
+          <div class="server-cont">
+            <div class="server-item">
+              <div class="icon feizhu"><i class="iconfont icon-feizhu1"></i></div>
+              <div class="text">飞猪</div>
+            </div>
+            <div class="server-item">
+              <div class="icon qunaer"><i class="iconfont icon-qunaer"></i></div>
+              <div class="text">去哪儿</div>
+            </div>
+            <div class="server-item">
+              <div class="icon xiecheng"><i class="iconfont icon-xiecheng"></i></div>
+              <div class="text">携程</div>
+            </div>
+            <div class="server-item">
+              <div class="icon meituan"><i class="iconfont icon-meituan1"></i></div>
+              <div class="text">美团</div>
+            </div>
+          </div>
+        </div>
+        <div class="server-section">
+          <div class="server-title">支付</div>
+          <div class="server-cont">
+            <div class="server-item">
+              <div class="icon zhifubao"><i class="iconfont icon-zhifubaozhifu"></i></div>
+              <div class="text">支付宝支付</div>
+            </div>
+            <div class="server-item">
+              <div class="icon weixinzhifu"><i class="iconfont icon-weixinzhifu"></i></div>
+              <div class="text">微信支付</div>
+            </div>
+          </div>
+        </div>
+        <div class="server-section">
+          <div class="server-title">投诉与建议</div>
+          <div class="server-cont">
+            <div class="server-item">
+              <div class="icon tousu"><i class="iconfont icon-tousu"></i></div>
+              <div class="text">投诉</div>
+            </div>
+            <div class="server-item">
+              <div class="icon jianyi"><i class="iconfont icon-jianyi"></i></div>
+              <div class="text">建议</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

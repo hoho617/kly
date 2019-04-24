@@ -1,0 +1,112 @@
+<div class="wrapper">
+  <div class="wrapper-bg" onscroll>
+    <div class="fixed-head">
+      <div class="head">
+        <div class="page-title">实时房态</div>
+        <div class="status-data">
+          <div class="weui-flex">
+            <div class="weui-flex__item">
+              <div class="data-item">
+                <p class="number">20<span class="symbol">%</span></p>
+                <p class="text">当前入住率</p>
+              </div>
+            </div>
+            <div class="weui-flex__item">
+              <div class="data-item no-border">
+                <p class="number"><span class="symbol">¥</span>{{roomType.notRoomNum}}</p>
+                <p class="text">在住房费</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-head">
+          <div class="weui-flex">
+            <div class="weui-flex__item align-right">
+              <div class="tab-item {{tab == '1'?'tab-item-active':''}}" (click)="changeTab('1')">
+                房型
+              </div>
+            </div>
+            <div class="weui-flex__item no-margin" (click)="changeTab('2')">
+              <div class="tab-item {{tab == '2'?'tab-item-active':''}}">
+                房号
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed-area gap-height" *ngIf="tab == '1'">
+        <!--<ng-container *ngFor="let item of roomTypeObj.lists">
+          <div class="room-item empty-btn {{ room == (index+1)?'empty-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('VC')">空净 <span>12</span></div>
+        </ng-container>-->
+
+        <div class="room-item dirty-btn {{ room == '2'?'dirty-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('VD')">空脏 <span>12</span></div>
+        <div class="room-item placehold-btn {{ room == '3'?'placehold-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('OD')">住脏 <span>12</span></div>
+        <div class="room-item live-btn {{ room == '4'?'live-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('OC')">住净 <span>12</span></div>
+        <div class="room-item reserve-btn {{ room == '5'?'reserve-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('RESV')">预定 <span>12</span></div>
+        <div class="room-item leave-btn {{ room == '6'?'leave-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('DUE_OUT')">预离 <span>12</span></div>
+        <div class="room-item repaire-btn {{ room == '7'?'repaire-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('OO')">维修 <span>12</span></div>
+        <div class="room-item all-btn {{ room == '8'?'all-active':''}}" [style.width.px]="offsetwidth" (click)="selectRoomType('')">全部 <span>{{roomTypeObj.total}}</span></div>
+      </div>
+      <div class="fixed-area gap-height" *ngIf="tab == '2'">
+        <div class="room-item reserve-btn" [style.width.px]="offsetwidth" (click)="reserveRoom()">预定 <span>12</span></div>
+        <div class="room-item leave-btn" [style.width.px]="offsetwidth" (click)="leaveRoom()">预离 <span>12</span></div>
+        <div class="room-item repaire-btn" [style.width.px]="offsetwidth" (click)="repaireRoom()">维修 <span>12</span></div>
+        <div class="room-item empty-btn {{ room == '1'?'empty-active':''}}" [style.width.px]="offsetwidth" (click)="emptyRoom()">空房 <span>12</span></div>
+        <div class="room-item dirty-btn {{ room == '2'?'dirty-active':''}}" [style.width.px]="offsetwidth" (click)="dirtyRoom()">脏房 <span>12</span></div>
+        <div class="room-item placehold-btn" [style.width.px]="offsetwidth" (click)="placeRoom()">占脏 <span>12</span></div>
+        <div class="room-item live-btn" [style.width.px]="offsetwidth" (click)="liveRoom()">住人 <span>12</span></div>
+        <div class="room-item all-btn {{ room == '8'?'all-active':''}}" [style.width.px]="offsetwidth" (click)="allRoom()">全部 <span>12</span></div>
+      </div>
+    </div>
+    <div class="type-list" *ngIf="tab == '1'">
+      <ng-container *ngFor="let item of roomTypeList">
+        <div class="type-item" *ngIf="item.roomList.length != 0">
+          <div class="item-title">{{item.name}}</div>
+          <div class="item-list">
+            <ng-container *ngFor="let room of item.roomList">
+              <div class="item-inner {{room.state == 'VC'?'empty':(room.state == 'VD'?'dirty':(room.state == 'OD'?'placehold':(room.state == 'OC'?'live':(room.state == 'RESV'?'reserve':(room.state == 'OC' || room.state == 'OD'?'leave':(item.state == 'OO'?'repaire':'repaire'))))))}}" [style.width.px]="offsetwidth2">{{room.roomNumber}}</div>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+    <div class="room-list" *ngIf="tab == '2'">
+      <div class="item-list">
+        <div class="item-inner empty" [style.width.px]="offsetwidth2">1001</div>
+        <div class="item-inner dirty" [style.width.px]="offsetwidth2">1002</div>
+        <div class="item-inner placehold" [style.width.px]="offsetwidth2">1003</div>
+        <div class="item-inner live" [style.width.px]="offsetwidth2">1004</div>
+        <div class="item-inner reserve" [style.width.px]="offsetwidth2">1005</div>
+        <div class="item-inner leave" [style.width.px]="offsetwidth2">1006</div>
+        <div class="item-inner repaire" [style.width.px]="offsetwidth2">1007</div>
+        <div class="item-inner dirty" [style.width.px]="offsetwidth2">1008</div>
+        <div class="item-inner live" [style.width.px]="offsetwidth2">1009</div>
+        <div class="item-inner empty" [style.width.px]="offsetwidth2">1010</div>
+        <div class="item-inner live" [style.width.px]="offsetwidth2">1009</div>
+        <div class="item-inner empty" [style.width.px]="offsetwidth2">1010</div>
+        <div class="item-inner live" [style.width.px]="offsetwidth2">1009</div>
+        <div class="item-inner empty" [style.width.px]="offsetwidth2">1010</div>
+      </div>
+    </div>
+    <div class="no-more">
+      <div class="line"></div>
+      <div class="nomore">没有更多了</div>
+      <div class="line"></div>
+    </div>
+    <div class="fixed-top">
+      <div class="pull-icon"><span></span></div>
+      <div class="fixed-list">
+        <div class="fixed-item"><span class="empty">空</span></div>
+        <div class="fixed-item"><span class="dirty">脏</span></div>
+        <div class="fixed-item"><span class="placehold">占</span></div>
+        <div class="fixed-item"><span class="live">住</span></div>
+        <div class="fixed-item"><span class="reserve">定</span></div>
+        <div class="fixed-item"><span class="leave">离</span></div>
+        <div class="fixed-item"><span class="repaire">修</span></div>
+        <div class="fixed-item"><span class="all">全</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+

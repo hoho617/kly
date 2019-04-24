@@ -1,0 +1,181 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="title">
+        <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+        <h4>收益早报</h4>
+        <span class="title-right"><i class="iconfont icon-lishishuju"></i></span>
+      </div>
+      <div class="income-data">
+        <div class="income-before">
+          <div class="pull-left">昨日营收 (元)</div>
+          <!--<div class="pull-right">同城对比 <i class="iconfont icon-jiantou"></i></div>-->
+        </div>
+        <div class="income-number">
+          {{manageDaily.todayRevenueAll}}
+        </div>
+        <div class="other-income">
+          <span>房费收入 {{manageDaily.todayRoomAll}}元</span>
+          <span>其它收入 {{manageDaily.todayReceivableAll}}元</span>
+        </div>
+      </div>
+    </div>
+    <div class="room-datas">
+      <div class="room-item">
+        <p>Revpar(总房数)</p>
+        <span>{{manageDaily.monthRevparallMoney}}</span>
+      </div>
+      <div class="room-item">
+        <p>平均房价</p>
+        <span>{{manageDaily.monthAverageMoney}}</span>
+      </div>
+      <div class="room-item">
+        <p>出租率(总房数)</p>
+        <span>{{manageDaily.monthRoomallRate}}%</span>
+      </div>
+      <div class="room-item">
+        <p>间夜数</p>
+        <span>{{manageDaily.todayNightCount}}</span>
+      </div>
+    </div>
+    <div class="room-datas">
+      <div class="room-item">
+        <p>Revpar(可售)</p>
+        <span>{{manageDaily.monthRevparMoney}}</span>
+      </div>
+      <div class="room-item">
+        <p>维修房</p>
+        <span>{{manageDaily.todayServicingCount}}</span>
+      </div>
+      <div class="room-item">
+        <p>出租率(可售)</p>
+        <span>{{manageDaily.todayRoomRate}}%</span>
+      </div>
+      <div class="room-item">
+        <p>过间夜数</p>
+        <span>{{manageDaily.todayNightallCount}}</span>
+      </div>
+    </div>
+    <div class="gap-height echarts-item">
+      <div class="echarts-title clearfix">
+        <div class="pull-left main-title">昨日订单</div>
+        <div class="pull-right link">同行对比 <i class="iconfont icon-jiantou"></i></div>
+      </div>
+      <div class="echarts-circle">
+        <div class="room-datas">
+          <div class="room-item" *ngFor="let item of incomeInfo.statistical">
+            <p>{{item.sourceName}}</p>
+            <span>{{item.orderCounts}}</span>
+          </div>
+          <!--<div class="room-item">-->
+            <!--<p>直销订单</p>-->
+            <!--<span>280</span>-->
+          <!--</div>-->
+          <!--<div class="room-item">-->
+            <!--<p>其它</p>-->
+            <!--<span>108</span>-->
+          <!--</div>-->
+        </div>
+        <div echarts [options]="option" class="demo-chart"></div>
+        <div class="ota-detail">
+          <div class="ota-title">OTA订单明细</div>
+          <div class="ota-list">
+              <div class="ota-item"><span>携程</span>{{otaMap.ctrip}}</div>
+              <div class="ota-item"><span>艺龙</span>{{otaMap.elong}}</div>
+              <div class="ota-item"><span>飞猪</span>{{otaMap.flypig}}</div>
+              <div class="ota-item"><span>美团</span>{{otaMap.mt}}</div>
+              <div class="ota-item"><span>去哪儿</span>{{otaMap.qunar}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap-height echarts-item pd-bottom">
+      <div class="echarts-title clearfix">
+        <div class="pull-left main-title">昨日产品销量</div>
+        <div class="pull-right link">同行对比 <i class="iconfont icon-jiantou"></i></div>
+      </div>
+      <div class="echarts-table">
+        <div class="table-head">
+          <div class="item">房型名称</div>
+          <div class="item">房间数</div>
+          <div class="item">间夜数</div>
+          <div class="item">出租率</div>
+          <div class="item">平均房价</div>
+        </div>
+        <div class="table-body">
+          <div class="table-row" *ngFor="let item of roomTypeOperateList">
+            <div class="item">{{item.roomType}}</div>
+            <div class="item">{{item.roomCount}}</div>
+            <div class="item">{{item.nightCount}}</div>
+            <div class="item">{{item.lettingRate}}%</div>
+            <div class="item">{{item.averagePrice}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap-height echarts-item pd-bottom">
+    <div class="echarts-title clearfix">
+      <div class="pull-left main-title">昨日客源结构</div>
+    </div>
+    <div class="echarts-table">
+      <div class="table-head">
+        <div class="item">客源</div>
+        <div class="item">间数</div>
+        <div class="item">占比</div>
+        <div class="item">收入</div>
+      </div>
+      <div class="table-body">
+        <div class="table-row">
+          <div class="item">散客</div>
+          <div class="item">32</div>
+          <div class="item">52%</div>
+          <div class="item">8766.00</div>
+        </div>
+        <div class="table-row">
+          <div class="item">会员</div>
+          <div class="item">10</div>
+          <div class="item">22%</div>
+          <div class="item">5745.00</div>
+        </div>
+        <div class="table-row">
+          <div class="item">单位</div>
+          <div class="item">2</div>
+          <div class="item">8%</div>
+          <div class="item">1456.00</div>
+        </div>
+        <div class="table-row">
+          <div class="item">中介</div>
+          <div class="item">10</div>
+          <div class="item">20%</div>
+          <div class="item">5874.00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="gap-height echarts-item">
+      <div class="echarts-title clearfix">
+        <div class="pull-left main-title">本日会员情况</div>
+      </div>
+      <div class="room-datas grey-txt">
+        <div class="room-item">
+          <p>会员办卡</p>
+          <span>260</span>
+        </div>
+        <div class="room-item">
+          <p>会员储值</p>
+          <span>280</span>
+        </div>
+        <div class="room-item">
+          <p>储值消费</p>
+          <span>108</span>
+        </div>
+      </div>
+    </div>
+    <div class="no-more">
+      <div class="line"></div>
+      <div class="nomore">我是有底线的</div>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>
+

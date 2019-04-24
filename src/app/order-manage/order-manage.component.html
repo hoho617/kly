@@ -1,0 +1,187 @@
+<div class="wrapper">
+  <div class="wrapper-bg">
+    <div class="fixed-head">
+      <div class="linear-bg">
+        <div class="title">
+          <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+          <h4>订单管理</h4>
+          <span class="title-right">
+            <weui-picker class="shops" placeholder="全部门店" required [groups]="items" [(ngModel)]="res.item" name="item"></weui-picker></span>
+        </div>
+        <div class="query-area">
+          <div class="clearfix opacity">
+            <div class="pull-left query-bar">
+              <div class="query-item {{drop == 1?'query-item-active':''}}" (click)="showDrop('1')">
+                <div>状态 <i class="iconfont icon-xiangxiazhankai"></i></div>
+              </div>
+              <div class="query-item {{drop == 2?'query-item-active':''}}" (click)="showDrop('2')">
+                渠道 <i class="iconfont icon-xiangxiazhankai"></i>
+              </div>
+              <div class="query-item {{drop == 3?'query-item-active':''}}" (click)="showDrop('3')">
+                时间 <i class="iconfont icon-xiangxiazhankai"></i>
+              </div>
+            </div>
+            <div class="pull-right query-btn" routerLink="search">搜索</div>
+          </div>
+          <div class="dropdown-box status-box" *ngIf="drop == 1">
+            <div class="panel-content">
+              <div class="panel-item {{item == 1?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectItem('1')">
+                未入住
+              </div>
+              <div class="panel-item {{item == 2?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectItem('2')">
+                已入住
+              </div>
+              <div class="panel-item {{item == 3?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectItem('3')">
+                已取消
+              </div>
+              <div class="panel-item {{item == 4?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectItem('4')">
+                全部
+              </div>
+            </div>
+            <div class="panel-btns clearfix">
+              <div class="pull-left btn-item">重置</div>
+              <div class="pull-right btn-item confirm">确定</div>
+            </div>
+          </div>
+          <div class="dropdown-box source-box" *ngIf="drop == 2">
+            <div class="panel-content">
+              <div class="panel-item {{item2 == 1?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectSource('1')">
+                去哪儿
+              </div>
+              <div class="panel-item {{item2 == 2?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectSource('2')">
+                携程
+              </div>
+              <div class="panel-item {{item2 == 3?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectSource('3')">
+                艺龙
+              </div>
+              <div class="panel-item {{item2 == 4?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectSource('4')">
+                全部
+              </div>
+            </div>
+            <div class="panel-btns clearfix">
+              <div class="pull-left btn-item">重置</div>
+              <div class="pull-right btn-item confirm">确定</div>
+            </div>
+          </div>
+          <div class="dropdown-box status-box" *ngIf="drop == 3">
+            <div class="panel-content">
+              <div class="panel-item {{item3 == 1?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectTime('1')">
+                本日
+              </div>
+              <div class="panel-item {{item3 == 2?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectTime('2')">
+                本周
+              </div>
+              <div class="panel-item {{item3 == 3?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectTime('3')">
+                本月
+              </div>
+              <div class="panel-item {{item3 == 4?'panel-item-active':''}}" [style.width.px]="offsetWidth" (click)="selectTime('4')">
+                全部
+              </div>
+            </div>
+            <div class="panel-btns clearfix">
+              <div class="pull-left btn-item">重置</div>
+              <div class="pull-right btn-item confirm">确定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="total-data">
+        <div class="shift-item pull-left">订单合计</div>
+        <div class="total-money pull-right">
+          <div class="money-item">
+            共计 <span>12</span> 间
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cont">
+      <div class="order-list">
+        <div class="order-item" routerLink="order-detail">
+          <div class="item-top">
+            <p class="client-name pull-left">
+              <span>肖先生</span>
+              <span>13800220022</span>
+              <span class="flag qunaer">去哪儿</span>
+              <!--<span class="flag xiecheng">携程</span>
+              <span class="flag feizhu">飞猪</span>
+              <span class="flag zhixiao">直销</span>-->
+            </p>
+            <span class="pull-right">
+              <span class="red-badge">未排房 <span class="weui-badge weui-badge_dot"></span></span>
+              <i class="iconfont icon-jiantou"></i>
+            </span>
+          </div>
+          <div class="hotel-name grey-font">金天鹅大酒店（步行街店）</div>
+          <div class="order-date grey-font">11月15日-16日（2晚）</div>
+          <div class="order-room grey-font">
+            <span>1023 豪华双人间</span>
+            <span>1024 豪华双人间</span>
+          </div>
+          <div class="order-price">
+            <span>¥ 258x2间x2晚</span>
+            <span>总价¥ 1032</span>
+          </div>
+          <div class="order-status already">已入住</div>
+          <!--<div class="order-status already-not">未入住</div>
+          <div class="order-status already-cancel">已取消</div>-->
+        </div>
+        <div class="order-item">
+          <div class="item-top">
+            <p class="client-name pull-left">
+              <span>肖先生</span>
+              <span>13800220022</span>
+              <span class="flag xiecheng">携程</span>
+            </p>
+            <span class="pull-right">
+              <!--<span class="red-badge">未排房 <i></i></span>-->
+              <i class="iconfont icon-jiantou"></i>
+            </span>
+          </div>
+          <div class="hotel-name grey-font">金天鹅大酒店（步行街店）</div>
+          <div class="order-date grey-font">11月15日-16日（2晚）</div>
+          <div class="order-room grey-font">
+            <span>1023 豪华双人间</span>
+            <span>1024 豪华双人间</span>
+          </div>
+          <div class="order-price">
+            <span>¥ 258x2间x2晚</span>
+            <span>总价¥ 1032</span>
+          </div>
+          <div class="order-status already-not">未入住</div>
+        </div>
+        <div class="order-item">
+          <div class="item-top">
+            <p class="client-name pull-left">
+              <span>肖先生</span>
+              <span>13800220022</span>
+              <span class="flag feizhu">飞猪</span>
+            </p>
+            <span class="pull-right">
+              <!--<span class="red-badge">未排房 <i></i></span>-->
+              <i class="iconfont icon-jiantou"></i>
+            </span>
+          </div>
+          <div class="hotel-name grey-font">金天鹅大酒店（步行街店）</div>
+          <div class="order-date grey-font">11月15日-16日（2晚）</div>
+          <div class="order-room grey-font">
+            <span>1023 豪华双人间</span>
+            <span>1024 豪华双人间</span>
+          </div>
+          <div class="order-price">
+            <span>¥ 258x2间x2晚</span>
+            <span>总价¥ 1032</span>
+          </div>
+          <div class="order-status already-cancel">已取消</div>
+        </div>
+      </div>
+      <div class="no-more">
+        <div class="line"></div>
+        <div class="nomore">我是有底线的</div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <!--黑色蒙版-->
+  <div class="popover-bg" *ngIf="mask" (click)="closeMask()"></div>
+</div>

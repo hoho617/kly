@@ -1,0 +1,88 @@
+<div class="wrapper renew-wrapper">
+  <div class="wrapper-bg">
+    <div class="title">
+      <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+      <h4>千里眼续费</h4>
+    </div>
+    <div class="section gap-height">
+        <div class="weui-media-box weui-media-box_appmsg">
+          <div class="weui-media-box__hd">
+            <img class="weui-media-box__thumb" src="../../../assets/images/defaultProfile.png" alt="">
+          </div>
+          <div class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">13874886360</h4>
+            <p class="weui-media-box__desc">免费版 | 2019-09-25 到期</p>
+          </div>
+        </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>开通服务</p>
+          </div>
+          <div class="weui-cell__ft">千里眼高级版</div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height mode-section">
+      <div class="mode-title">
+        <p>付费模式</p>
+      </div>
+      <div class="mode-list">
+        <div class="mode-item {{mode == 1?'mode-item-active':''}}" [style.width.px]="modeWidth" (click)="chooseMode('1')">
+          <h4 class="mode-item-title">1个月</h4>
+          <p class="mode-item-price"><span class="real">售价:100元</span></p>
+        </div>
+        <div class="mode-item {{mode == 2?'mode-item-active':''}}" [style.width.px]="modeWidth" (click)="chooseMode('2')">
+          <h4 class="mode-item-title">3个月</h4>
+          <p class="mode-item-price"><span class="original">原价:300元</span><span class="real">售价:100元</span></p>
+        </div>
+        <div class="mode-item {{mode == 3?'mode-item-active':''}}" [style.width.px]="modeWidth" (click)="chooseMode('3')">
+          <h4 class="mode-item-title">6个月</h4>
+          <p class="mode-item-price"><span class="original">原价:600元</span><span class="real">售价:520元</span></p>
+        </div>
+        <div class="mode-item  {{mode == 4?'mode-item-active':''}} recommend" [style.width.px]="modeWidth" (click)="chooseMode('4')">
+          <h4 class="mode-item-title">1年</h4>
+          <p class="mode-item-price"><span class="original">原价:1200元</span><span class="real">售价:1000元</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell weui-cell_access">
+          <div class="weui-cell__bd">
+            <p>优惠券</p>
+          </div>
+          <div class="weui-cell__ft">
+            您有2个优惠券可用
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section gap-height">
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>支付方式</p>
+          </div>
+          <div class="weui-cell__ft">
+            <i class="iconfont icon-weixinzhifu"></i>
+            微信支付
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed-foot">
+    <div class="weui-flex">
+      <div class="weui-flex__item left-item">
+        <div class="placeholder">应付金额： <span class="red-color">¥<i>1000</i>.00</span></div>
+      </div>
+      <div class="weui-flex__item linear-color">
+        <div class="placeholder">付款</div>
+      </div>
+    </div>
+  </div>
+</div>
+

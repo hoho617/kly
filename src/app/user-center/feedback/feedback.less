@@ -1,0 +1,151 @@
+.feed-wrapper {
+  *{
+    box-sizing:border-box;
+  }
+    height: 100%;
+    background-color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+    box-sizing:border-box;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  .wrapper-bg {
+    background-color: #F5F5F5;
+  }
+  .gap-height {
+    margin-top:8px;
+  }
+  .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    color:#3E3A39;
+    padding:0 15px;
+    background-color: #fff;
+    h4{
+      font-weight: normal;
+    }
+    .return-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      text-align: right;
+      transform: rotateY(180deg);
+      .iconfont {
+        color:#3E3A39;
+      }
+    }
+    .right-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      right:0;
+      color:#F29600;
+    }
+  }
+  .section {
+    background-color: #fff;
+    line-height: 1;
+    padding-bottom:60px;
+   .relation-form {
+     padding:15px;
+     .form-item {
+        margin-bottom:20px;
+       .form-hd {
+         font-size: 1.5rem;
+         color:#000;
+         margin-bottom:12px;
+         span {
+           color:#E50012;
+           margin-right:5px;
+         }
+       }
+        .form-bd {
+          padding:0 12px;
+          .form-input {
+            padding:10px 0 10px 10px;
+            border:1px solid #DBDCDC;
+            border-radius:5px;
+            font-size: 1.5rem;
+            width:100%;
+            outline-color: #F29600;
+          }
+          .shops {
+            padding:9px 0 9px 10px;
+            border:1px solid #DBDCDC;
+            border-radius:5px;
+            font-size: 1.5rem;
+            width:100%;
+            outline-color: #F29600;
+            display: block;
+            position: relative;
+            .weui-input {
+              font-size: 1.4rem;
+            }
+          }
+          .shops:before {
+            position: absolute;
+            right:15px;
+            top:13px;
+            color:#9E9E9F;
+            font-size: 1.4rem;
+          }
+          .form-bd-list {
+            overflow: hidden;
+            .form-bd-item {
+              float: left;
+              text-align: center;
+              height: 30px;
+              line-height: 30px;
+              border:1px solid #DBDCDC;
+              font-size: 1.2rem;
+              color:#9E9E9F;
+              margin-right:9px;
+              border-radius:4px;
+            }
+            .form-bd-item:nth-child(5n) {
+              margin:0;
+            }
+            .form-bd-item-active {
+              color:#fff;
+              border-color:transparent;
+              background-color: #F29600;
+            }
+          }
+          .weui-textarea {
+            width:100%;
+            font-family: inherit;
+            min-height: 100px;
+            border:1px solid #DBDCDC;
+            border-radius:8px;
+            padding:10px 0 0 10px;
+            font-size: 1.5rem;
+          }
+        }
+       input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+         font-size: 1.2rem;
+         color:#9E9E9F;
+       }
+     }
+   }
+  }
+  .form-btn-submit {
+    margin-top:10px;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    .btn-inner {
+      height: 60px;
+      line-height: 60px;
+      color:#fff;
+      font-size: 1.8rem;
+      text-align: center;
+      background: linear-gradient(to right,#FFB400,#FF8200);
+    }
+  }
+}

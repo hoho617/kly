@@ -1,0 +1,249 @@
+
+.compare-wrap {
+  *{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+  }
+    height: 100%;
+    background-color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+    line-height: 1;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  .longgap-height {
+    margin-top:20px;
+  }
+  .clearfix:after {
+    content:"";
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+  }
+  .pull-left {
+    float: left;
+  }
+  .pull-right {
+    float: right;
+  }
+  .wrapper-bg {
+    background-color: #F5F5F5;
+  }
+  .fixed-head {
+    background: #FF5454;
+    color:#fff;
+    padding:0 15px;
+    position: absolute;
+    top:0;
+    width:100%;
+  }
+ /* .fixed-head:after {
+    content: " ";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    right: 15px;
+    height: 1px;
+    background-color: rgba(255,255,255,.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    z-index: 2;
+
+  }*/
+
+  .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    h4 {
+      font-weight: normal;
+    }
+    .return-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      text-align: right;
+      transform: rotateY(180deg);
+      .iconfont {
+
+      }
+
+    }
+    .title-right {
+      position: absolute;
+      right:0px;
+      top:0;
+      text-align: right;
+      width:40px;
+      height: 40px;
+      line-height: 40px;
+      .iconfont {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .tab-head {
+    overflow: hidden;
+    padding:0 30%;
+    .tab-head-item {
+      height: 35px;
+      line-height: 35px;
+      float: left;
+      width:50%;
+      text-align: center;
+      color:#fff;
+      opacity: .5;
+      span {
+        display: inline-block;
+        position: relative;
+      }
+      span:after {
+        content:"";
+        display: block;
+        height: 2px;
+        width:100%;
+        background-color: transparent;
+        position: absolute;
+        bottom:0;
+        border-radius:2px;
+      }
+    }
+    .tab-head-item-active {
+      opacity: 1;
+      span:after {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .scroll-cont {
+    position: absolute;
+    top:75px;
+    bottom:0;
+    width:100%;
+    overflow: auto;
+  }
+
+
+  .echarts-item {
+    padding:0 15px;
+    .echarts-sheet {
+      background-color: #fff;
+    }
+    .echarts-title {
+      padding:12px 0;
+      .main-title {
+        font-size: 1.4rem;
+        color:#000000;
+        padding-left:5px;
+        border-left: 3px solid #FD6452;
+      }
+    }
+  }
+  .echarts-item {
+
+  }
+.echarts-sheet {
+  border:1px solid #DCDDDD;
+  border-radius:6px;
+  .sheet-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color:#231815;
+    line-height: 30px;
+    span {
+      font-size: 1.2rem;
+      color:#9FA0A0;
+    }
+  }
+  .demo-sheet {
+    height: 240px;
+  }
+  .sheet-table {
+    padding:0 10px;
+  }
+}
+  .pd-bottom {
+    padding-bottom:12px;
+  }
+
+  .echarts-table {
+    border:1px solid #9FA0A0;
+    width:100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    tr {
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #9FA0A0;
+      color:#000;
+      text-align: center;
+    }
+    tr:last-child {
+      border:none;
+    }
+  }
+  .no-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:12px 15px;
+    .line {
+      flex: 1;
+      display: inline-block;
+      height: 1px;
+      background-color: #DCDDDD;
+    }
+    .nomore {
+      margin:0 12px;
+      font-size: 1.1rem;
+      color:#9FA0A0;
+    }
+  }
+
+  .date-select {
+    height: 44px;
+    line-height: 44px;
+    padding:0 10px;
+  }
+  .date-picker {
+    position: absolute;
+    width:18%;
+    height: 44px;
+    line-height: 44px;
+    top:0;
+    right:12px;
+    .weui-input {
+      font-size: 1.4rem;
+      height: 44px;
+      line-height: 44px;
+    }
+    .iconfont {
+      position: absolute;
+      font-size: 1.4rem;
+      bottom:0;
+      right:0;
+    }
+  }
+  .month {
+    font-size: 1.2rem;
+    width:35%;
+    opacity: .5;
+    span {
+      display: inline-block;
+      width:50%;
+      text-align: right;
+      font-weight: 600;
+    }
+  }
+
+
+}

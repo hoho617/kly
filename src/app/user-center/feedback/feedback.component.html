@@ -1,0 +1,52 @@
+<div class="wrapper feed-wrapper">
+  <div class="wrapper-bg">
+    <div class="title">
+      <div class="return-icon"><i class="iconfont icon-jiantou"></i></div>
+      <h4>意见反馈</h4>
+    </div>
+    <div class="section gap-height">
+      <div class="relation-form">
+        <div class="form-item">
+          <div class="form-hd"><span>*</span><label>服务类型</label></div>
+          <div class="form-bd">
+            <weui-picker class="shops iconfont icon-jiantouxia" placeholder="请选择服务类型" required [groups]="items" [(ngModel)]="item" name="item"></weui-picker>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-hd"><span>*</span><label>酒店名称</label></div>
+          <div class="form-bd">
+            <input type="text" class="form-input" [(ngModel)]="hotelName" name="hotelName">
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-hd"><span>*</span><label>联系电话</label></div>
+          <div class="form-bd">
+            <input type="text" class="form-input" [(ngModel)]="phoneNumber" name="phoneNumber">
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-hd"><span>*</span><label>产品类型</label></div>
+          <div class="form-bd">
+            <div class="form-bd-list">
+              <div class="form-bd-item {{type == 1?'form-bd-item-active':''}}" [style.width.px]="productWidth" (click)="changeType('1')">千里眼</div>
+              <div class="form-bd-item {{type == 2?'form-bd-item-active':''}}" [style.width.px]="productWidth" (click)="changeType('2')">PMS</div>
+              <div class="form-bd-item {{type == 3?'form-bd-item-active':''}}" [style.width.px]="productWidth" (click)="changeType('3')">OTA</div>
+              <div class="form-bd-item {{type == 4?'form-bd-item-active':''}}" [style.width.px]="productWidth" (click)="changeType('4')">支付</div>
+              <div class="form-bd-item {{type == 5?'form-bd-item-active':''}}" [style.width.px]="productWidth" (click)="changeType('5')">其他</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-hd"><span>*</span><label>内容描述</label></div>
+          <div class="form-bd">
+            <textarea class="weui-textarea" placeholder="8-20个字符，包含字母和数字" [(ngModel)]="txta" name="txta" weui-textarea></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-btn form-btn-submit">
+    <div class="btn-inner">提交</div>
+  </div>
+</div>
+

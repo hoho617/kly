@@ -1,0 +1,228 @@
+.coupon-wrapper {
+  *{
+    box-sizing:border-box;
+  }
+    height: 100%;
+    background-color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+    box-sizing:border-box;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  .wrapper-bg {
+    background-color: #F5F5F5;
+  }
+  .pull-left {
+    float: left;
+  }
+  .pull-right {
+    float: right;
+  }
+  .gap-height {
+    margin-top:8px;
+  }
+  .fixed-head {
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index: 999;
+    .tab-head {
+      font-size: 1.5rem;
+      color:#B4B4B5;
+      height: 40px;
+      line-height: 40px;
+      background: #fff;
+      .weui-flex__item {
+        text-align: center;
+      }
+      .tab-item {
+        display: inline-block;
+        position: relative;
+        padding:12px 0 13px;
+        line-height: 1;
+      }
+      .tab-item-active {
+        color:#3E3A39;
+      }
+      .tab-item-active:after {
+        position: absolute;
+        content:"";
+        display: block;
+        height: 3px;
+        background-color: #FA8C32;
+        border-radius:2px;
+        bottom:0;
+        width:30px;
+        left:50%;
+        margin-left:-15px;
+      }
+    }
+  }
+  .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    color:#3E3A39;
+    padding:0 15px;
+    background-color: #fff;
+    h4{
+      font-weight: normal;
+    }
+    .return-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      text-align: right;
+      transform: rotateY(180deg);
+      .iconfont {
+        color:#3E3A39;
+      }
+    }
+  }
+  .float-notice {
+    height: 25px;
+    line-height: 25px;
+    padding:0 10px 0 18px;
+    font-size: 1.2rem;
+    color:#E95513;
+    overflow: hidden;
+    background-color: #FAF0DB;
+    .icon-tongzhi {
+      font-size: 1.4rem;
+      margin-right:5px;
+      vertical-align: middle;
+    }
+    .close-notice {
+      color:#FFD1A6;
+    }
+  }
+
+  .scroll-cont {
+    position: absolute;
+    top:80px;
+    width:100%;
+    overflow: auto;
+    bottom:0;
+
+    .coupon-cells {
+
+      .coupon-cell {
+        width:90%;
+        margin:20px auto 0;
+        height: 100px;
+        box-shadow:0 2px 5px rgba(0,0,0,.1);
+        position: relative;
+        line-height: 1;
+        .coupon-heading {
+          float: left;
+          width:100px;
+          height: 100px;
+          position: relative;
+          background: linear-gradient(-45deg,#FF423D,#FF9E66);
+          text-align: center;
+          color:#fff;
+          padding:17px 0;
+          .coupon-hd-title {
+            font-weight: bold;
+            h4 {
+              font-size: 4rem;
+              span {
+                font-size: 1.2rem;
+              }
+            }
+          }
+          .coupon-hd-sub {
+            font-size: 1rem;
+            margin-top:15px;
+          }
+        }
+        .coupon-heading:before {
+          content:"";
+          display: block;
+          width:10px;
+          height: 10px;
+          background-color: #f5f5f5;
+          border-radius:0 0 5px 5px;
+          position: absolute;
+          top:-5px;
+          right:-5px;
+          z-index: 99;
+        }
+        .coupon-heading:after {
+           content:"";
+           display: block;
+           width:10px;
+           height: 10px;
+           background-color: #f5f5f5;
+           border-radius:5px 5px 0 0;
+           position: absolute;
+           bottom:-5px;
+           right:-5px;
+          z-index: 99;
+         }
+
+        .coupon-body {
+          background-color: #fff;
+          height: 100px;
+          padding:15px 0 15px 10px;
+          overflow: hidden;
+          position: relative;
+          .coupon-body-title {
+            font-size: 1.5rem;
+            color:#231815;
+          }
+          .coupon-body-desc {
+            font-size: 1.2rem;
+            color:#9FA0A0;
+            margin:12px 0;
+          }
+          .coupon-body-other {
+            font-size: 1.1rem;
+            color:#9FA0A0;
+          }
+          .coupon-status {
+            position: absolute;
+            width:50px;
+            height: 17px;
+            line-height: 17px;
+            text-align: center;
+            color:#fff;
+            border-radius:8px 0 0 8px;
+            right:0;
+            top:15px;
+          }
+          .new-coupon {
+            background: linear-gradient(to right,#DADF00,#8DC21F);
+          }
+          .soon-coupon {
+            background: linear-gradient(to right,#FF9E66,#FF423D);
+          }
+          .out-coupon {
+            background: linear-gradient(to right,#DBDCDC,#888888);
+          }
+        }
+      }
+      .no-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:18px 15px;
+        .line {
+          flex: 1;
+          display: inline-block;
+          height: 1px;
+          background-color: #DCDDDD;
+        }
+        .nomore {
+          margin:0 12px;
+          font-size: 1.1rem;
+          color:#9FA0A0;
+        }
+      }
+    }
+  }
+}

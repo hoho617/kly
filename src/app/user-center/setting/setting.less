@@ -1,0 +1,81 @@
+.setting-wrapper {
+  *{
+    box-sizing:border-box;
+  }
+    height: 100%;
+    background-color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;;
+    box-sizing:border-box;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  .wrapper-bg {
+    background-color: #F5F5F5;
+  }
+  .gap-height {
+    margin-top:8px;
+  }
+  .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    color:#3E3A39;
+    padding:0 15px;
+    background-color: #fff;
+    h4{
+      font-weight: normal;
+    }
+    .return-icon {
+      position: absolute;
+      width:40px;
+      height: 40px;
+      top:0;
+      text-align: right;
+      transform: rotateY(180deg);
+      .iconfont {
+        color:#3E3A39;
+      }
+    }
+  }
+  .section {
+    background-color: #fff;
+    .weui-cells {
+      margin-top:0;
+      font-size: 1.5rem;
+      color:#3E3A39;
+      .weui-cell {
+        padding:12px 15px;
+        .weui-switch, .weui-switch-cp__box {
+          width:32px;
+          height: 20px;
+        }
+        .weui-switch:after, .weui-switch-cp__box:after {
+          width:18px;
+          height: 18px;
+        }
+        .weui-switch:checked:after, .weui-switch-cp__input:checked ~ .weui-switch-cp__box:after {
+          transform:translateX(12px);
+        }
+        .weui-media-box__title {
+          font-size: 1.5rem;
+          color:#3E3A39;
+        }
+        .weui-media-box__desc {
+          font-size: 1.2rem;
+          color:#9E9E9F;
+        }
+      }
+      .weui-cell:before {
+        right:15px;
+        border-color:#DCDDDD;
+      }
+    }
+    .weui-cells:after,.weui-cells:before {
+      display: none;
+    }
+  }
+
+}
